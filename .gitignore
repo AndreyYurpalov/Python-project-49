@@ -1,0 +1,9 @@
+.venv/
+
+dist/
+
+*.pyc
+
+*.cast
+
+*__init__*
