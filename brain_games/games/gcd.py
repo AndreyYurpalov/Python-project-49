@@ -14,6 +14,6 @@ def game_cycle():
                       if sp_arguments[1] % answer[i] == 0]
     correct_answer = sp_arguments[1] // min(control_answer)
     dic_res['correct_answer'] = str(correct_answer)
-    number = f'{sp_arguments[0]}  {sp_arguments[1]}'
-    dic_res['number'] = number
+    dic_res['number1'] = sp_arguments[0]
+    dic_res['number2'] = sp_arguments[1]
     return dic_res
