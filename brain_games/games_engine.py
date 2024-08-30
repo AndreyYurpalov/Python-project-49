@@ -10,10 +10,10 @@ def engine(dic_res, game_cycle):
     sum_correct_answer = 0
     while attempt < 3:
         game_cycle()
-        text = ['Question: ']
+        text = []
         [text.append(str(dic_res[i])) for i in dic_res if 'num' in i]
         text = ' '.join(text)
-        print(text)
+        print(f'Question: {text}')
         your_answer = prompt.string("Your answer: ")
         if str(your_answer) == str(dic_res.get('correct_answer')):
             print('Correct!')
