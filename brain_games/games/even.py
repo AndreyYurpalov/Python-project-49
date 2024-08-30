@@ -14,6 +14,5 @@ def game_cycle():
     else:
         correct_answer = 'no'
     dic_res['correct_answer'] = str(correct_answer)
-    number = f'Question: {number}'
-    dic_res['number'] = number
+    dic_res['number1'] = number
     return dic_res
