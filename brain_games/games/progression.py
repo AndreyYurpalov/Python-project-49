@@ -15,5 +15,5 @@ def game_cycle():
     progression[i] = '..'
     dic_res['correct_answer'] = str(correct_answer)
     number = ' '.join(str(arg) for arg in progression)
-    dic_res['number'] = number
+    dic_res['number1'] = number
     return dic_res
