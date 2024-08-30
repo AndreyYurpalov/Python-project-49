@@ -2,8 +2,8 @@ import random
 
 
 dic_res = dict()
-dic_res['question'] = 'Answer "yes" if given number is prime.'
-'Otherwise answer "no".'
+dic_res['question'] = ('Answer "yes" if given number is prime. '
+                       'Otherwise answer "no".')
 
 
 def game_cycle():
