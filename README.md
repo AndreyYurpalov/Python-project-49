@@ -1,44 +1,44 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AndreyYurpalov/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AndreyYurpalov/python-project-49/actions)
 
-В Проекте использует: Language Python, Library prompt, Library random
+### The Project uses: Language Python, Library prompt, Library random
 
-В играх Вы сможете ответить на вопросы
+### In the games you will be able to answer questions
 
-Brain Even: Answer "yes" if the number is even, otherwise answer "no"
+**Brain Even:** *Answer "yes" if the number is even, otherwise answer "no"*
 
-Brain Calculator: Answer what is the result of the expression?
+**Brain Calculator:** *Answer what is the result of the expression?*
 
-Brain GCD: Answer what is the greatest common divisor of given numbers
+**Brain GCD:** *Answer what is the greatest common divisor of given numbers*
 
-Brain Progression: Answer what number is missing in the progression?
+**Brain Progression:** *Answer what number is missing in the progression?*
 
-Brain Prime Answer: "yes" if given number is prime, otherwise answer "no"
-
-
-Install
-
-git clone https://github.com/AndreyYurpalov/python-project-49.git
-
-cd new-project-49
-
-make package-install
-
-КОМАНДЫ ДЛЯ ЗАПУСКА ИГР
-
-brain-calc
-
-brain-even
-
-brain-gcd
-
-brain-prime
-
-brain-progression
+**Brain Prime Answer:** *"yes" if given number is prime, otherwise answer "no"*
 
 
+### Install
 
-ПРЕЗЕНТАЦИЯ ИГР
+#### git clone https://github.com/AndreyYurpalov/python-project-49.git
+
+#### cd new-project-49
+
+#### make package-install
+
+### Simple commands to launch games
+
+**brain-calc**
+
+**brain-even**
+
+**brain-gcd**
+
+**brain-prime**
+
+**brain-progression**
+
+
+
+### presentation of games
 
 
 [Game Brain-calc](https://asciinema.org/a/W6J4iNRsVvJMwN5Dqo7W5ibUW),
@@ -49,4 +49,4 @@ brain-progression
 
 
 
-Удачи!
+## GOOD LUCK!
