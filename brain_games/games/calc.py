@@ -1,22 +1,21 @@
 import random
+from brain_games.games_engine import engine, QUESTION_CALC
 
 
-dic_res = dict()
-dic_res['question'] = 'What is the result of the expression?'
-
-
-def game_cycle():
-    sp_arguments = [random.randint(1, 20) for _ in range(2)]
+def game_cycle_calc():
+    num1, num2 = random.randint(1, 20), random.randint(1, 20)
     actions = ('+', '-', '*')
     action = random.choice(actions)
     if action == '+':
-        correct_answer = sp_arguments[0] + sp_arguments[1]
+        correct_answer = num1 + num2
     elif action == '-':
-        correct_answer = sp_arguments[0] - sp_arguments[1]
+        correct_answer = num1 - num2
     else:
-        correct_answer = sp_arguments[0] * sp_arguments[1]
-    dic_res['correct_answer'] = str(correct_answer)
-    dic_res['number1'] = sp_arguments[0]
-    dic_res['number2'] = action
-    dic_res['number3'] = sp_arguments[1]
-    return dic_res
+        correct_answer = num1 * num2
+    question = f'{num1} {action} {num2}'
+
+    return question, str(correct_answer)
+
+
+def start_game_calc():
+    engine(game_cycle_calc, QUESTION_CALC)
