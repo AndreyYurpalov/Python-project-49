@@ -1,18 +1,16 @@
 import random
+from brain_games.games_engine import engine, QUESTION_EVEN
 
 
-dic_res = dict()
-dic_res['question'] = ('Answer "yes" if the number is even, '
-                       'otherwise answer "no".')
+def is_even(num):
+    return num % 2 == 0
 
 
-def game_cycle():
-    number = random.randint(1, 100)
-    control = number % 2
-    if control == 0:
-        correct_answer = 'yes'
-    else:
-        correct_answer = 'no'
-    dic_res['correct_answer'] = str(correct_answer)
-    dic_res['number1'] = number
-    return dic_res
+def game_cycle_even():
+    question = random.randint(1, 100)
+    correct_answer = 'yes' if is_even(question) else 'no'
+    return str(question), str(correct_answer)
+
+
+def start_game_even():
+    engine(game_cycle_even, QUESTION_EVEN)
