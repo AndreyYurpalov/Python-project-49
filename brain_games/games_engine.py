@@ -1,29 +1,30 @@
 import prompt
+from brain_games.games import cli
 
 
-def engine(dic_res, game_cycle):
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print(dic_res.get('question'))
-    attempt = 0
-    sum_correct_answer = 0
-    while attempt < 3:
-        game_cycle()
-        text = []
-        [text.append(str(dic_res[i])) for i in dic_res if 'num' in i]
-        text = ' '.join(text)
-        print(f'Question: {text}')
+ATTEMPT = 3
+# Question for games
+QUESTION_CALC = 'What is the result of the expression?'
+QUESTION_EVEN = 'Answer "yes" if the number is even otherwise answer "no".'
+QUESTION_GCD = 'Find the greatest common divisor of given numbers.'
+QUESTION_PRIME = ('Answer "yes" if given number is prime. '
+                  'Otherwise answer "no".')
+QUESTION_PROGRESSION = 'What number is missing in the progression?'
+
+
+def engine(game, quest):
+    name = cli.welcome_user()
+    print(quest)
+    for _ in range(ATTEMPT):
+        question, correct_answer = game()
+        print(f'Question: {question}')
         your_answer = prompt.string("Your answer: ")
-        if str(your_answer) == str(dic_res.get('correct_answer')):
+        if str(your_answer) == correct_answer:
             print('Correct!')
-            attempt += 1
-            sum_correct_answer += 1
         else:
-            attempt = 3
-    if sum_correct_answer == 3:
-        print(f'Congratulations, {name}!')
-    else:
-        print(f"'{your_answer}' is wrong answer ;(."
-              f"Correct answer was '{dic_res.get('correct_answer')}'")
-        print(f"Let's try again, {name}!")
+            print(f"'{your_answer}' is wrong answer ;(."
+                  f"Correct answer was '{correct_answer}'")
+            print(f"Let's try again, {name}!")
+            return
+
+    print(f'Congratulations, {name}!')
