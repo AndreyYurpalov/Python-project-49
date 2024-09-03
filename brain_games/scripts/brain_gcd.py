@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 
-from brain_games.games_engine import engine
-from brain_games.games.gcd import dic_res, game_cycle
+from brain_games.games.gcd import start_game_gcd
 
 
 def main():
-    engine(dic_res, game_cycle)
+    start_game_gcd()
 
 
 if __name__ == '__main__':
