@@ -1,11 +1,8 @@
 import random
+from brain_games.games_engine import engine, QUESTION_PROGRESSION
 
 
-dic_res = dict()
-dic_res['question'] = 'What number is missing in the progression?'
-
-
-def game_cycle():
+def game_cycle_progression():
     start_sp = random.randint(1, 100)
     kof_prog = random.randint(2, 4)
     len_prog = 10
@@ -13,7 +10,9 @@ def game_cycle():
     i = random.randint(0, 9)
     correct_answer = progression[i]
     progression[i] = '..'
-    dic_res['correct_answer'] = str(correct_answer)
-    number = ' '.join(str(arg) for arg in progression)
-    dic_res['number1'] = number
-    return dic_res
+    question = ' '.join(str(arg) for arg in progression)
+    return str(question), str(correct_answer)
+
+
+def start_game_progression():
+    engine(game_cycle_progression, QUESTION_PROGRESSION)
