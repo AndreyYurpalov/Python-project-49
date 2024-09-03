@@ -13,15 +13,13 @@ QUESTION_PROGRESSION = 'What number is missing in the progression?'
 
 
 def engine(game, quest):
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
+    name = cli.welcome_user()
     print(quest)
     for _ in range(ATTEMPT):
         question, correct_answer = game()
         print(f'Question: {question}')
         your_answer = prompt.string("Your answer: ")
-        if str(your_answer) == correct_answer:
+        if str(your_answer) == str(correct_answer):
             print('Correct!')
         else:
             print(f"'{your_answer}' is wrong answer ;(."
