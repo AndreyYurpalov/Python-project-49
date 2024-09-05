@@ -1,8 +1,14 @@
+# ---   The goal of the game is to answer the question   ---
+# ---     What number is missing in the progression?     ---
+
+
 import random
-from brain_games.games_engine import engine, QUESTION_PROGRESSION
 
 
-def game_cycle_progression():
+QUESTION_OF_GAME = 'What number is missing in the progression?'
+
+
+def get_progression_whit_missing_number_and_answer():
     start_sp = random.randint(1, 100)
     kof_prog = random.randint(2, 4)
     len_prog = 10
@@ -12,7 +18,3 @@ def game_cycle_progression():
     progression[i] = '..'
     question = ' '.join(str(arg) for arg in progression)
     return str(question), str(correct_answer)
-
-
-def start_game_progression():
-    engine(game_cycle_progression, QUESTION_PROGRESSION)
