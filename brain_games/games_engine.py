@@ -5,7 +5,7 @@ from brain_games.games.cli import welcome_user
 ATTEMPT = 3
 # Question for games
 QUESTION_CALC = 'What is the result of the expression?'
-QUESTION_EVEN = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 QUESTION_GCD = 'Find the greatest common divisor of given numbers.'
 QUESTION_PRIME = ('Answer "yes" if given number is prime. '
                   'Otherwise answer "no".')
