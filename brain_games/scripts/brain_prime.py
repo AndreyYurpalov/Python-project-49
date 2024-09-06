@@ -6,7 +6,7 @@ from brain_games.games_engine import engine
 
 
 def main():
-    engine(prime.get_number_and_answer, prime.QUESTION_OF_GAME)
+    engine(prime)
 
 
 if __name__ == '__main__':
