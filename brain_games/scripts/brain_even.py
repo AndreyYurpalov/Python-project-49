@@ -6,7 +6,7 @@ from brain_games.games_engine import engine
 
 
 def main():
-    engine(even.get_random_num_and_answer, even.QUESTION_OF_GAME)
+    engine(even)
 
 
 if __name__ == '__main__':
