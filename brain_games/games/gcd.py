@@ -9,7 +9,7 @@ import math
 QUESTION_OF_GAME = 'Find the greatest common divisor of given numbers.'
 
 
-def get_numbers_and_answer():
+def get_question_and_correct_answer():
     num1, num2 = random.randint(1, 20), random.randint(1, 20)
     correct_answer = math.gcd(num1, num2)
     question = f'{num1} {num2}'
