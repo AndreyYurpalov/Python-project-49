@@ -12,7 +12,7 @@ def is_even(num):
     return num % 2 == 0
 
 
-def get_random_num_and_answer():
+def get_question_and_correct_answer():
     question = random.randint(1, 100)
     correct_answer = 'yes' if is_even(question) else 'no'
     return str(question), str(correct_answer)
