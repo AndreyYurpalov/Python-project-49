@@ -8,7 +8,7 @@ import random
 QUESTION_OF_GAME = 'What number is missing in the progression?'
 
 
-def get_progression_whit_missing_number_and_answer():
+def get_question_and_correct_answer():
     start_sp = random.randint(1, 100)
     kof_prog = random.randint(2, 4)
     len_prog = 10
