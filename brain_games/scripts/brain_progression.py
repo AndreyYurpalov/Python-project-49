@@ -6,8 +6,7 @@ from brain_games.games_engine import engine
 
 
 def main():
-    engine(progression.get_progression_whit_missing_number_and_answer,
-           progression.QUESTION_OF_GAME)
+    engine(progression)
 
 
 if __name__ == '__main__':
