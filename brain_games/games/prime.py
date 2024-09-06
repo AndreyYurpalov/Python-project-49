@@ -14,7 +14,7 @@ def is_number_prime(number):
     return len(divisions) < 1
 
 
-def get_number_and_answer():
+def get_question_and_correct_answer():
     len_sp = 100
     question = random.randint(2, len_sp)
     correct_answer = 'yes' if is_number_prime(question) else 'no'
